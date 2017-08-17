@@ -19,21 +19,16 @@
         ],
         "responses": {
           "200": {
+            "description": "success",
             "schema": {
               "$ref": "#/definitions/EntityConfig"
-            }
-          },
-          "204": {},
-          "401": {},
-          "500": {
-            "schema": {
-              "$ref": "#/definitions/ResponseStatus"
             }
           }
         }
       },
       "put": {
         "summary": "Modify Entity instance",
+        "description": "modify API",
         "parameters": [
           {
             "name": "body",
@@ -45,18 +40,31 @@
         ],
         "responses": {
           "200": {
+            "description": "Success",
             "schema": {
               "$ref": "#/definitions/ResponseStatus"
             }
           },
           "500": {
+            "description": "Fail",
             "schema": {
               "$ref": "#/definitions/ResponseStatus"
             }
           }
         }
       },
-      "delete": {},
+      "delete": {
+        "summary": "delete an entity instance",
+        "description": "delete API",
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "$ref": "#/definitions/ResponseStatus"
+            }
+          }
+        }
+      },
       "parameters": [
         {
           "name": "entityId",
