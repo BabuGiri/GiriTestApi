@@ -6,7 +6,7 @@
     "version": "1.0.0"
   },
   "definitions": {
-    "identifiers": {
+    "EntitiyIdentifiers": {
       "properties": {
         "id": {
           "type": "string"
@@ -22,7 +22,7 @@
     "EntityConfig": {
       "properties": {
         "identifiers": {
-          "$ref": "#/definitions/identifiers"
+          "$ref": "#/definitions/EntitiyIdentifiers"
         }
       }
     }
