@@ -25,6 +25,23 @@
           "$ref": "#/definitions/EntitiyIdentifiers"
         }
       }
+    },
+    "EntityState": {
+      "properties": {
+        "state": {
+          "type": "string"
+        }
+      }
+    },
+    "Entity": {
+      "properties": {
+        "config": {
+          "$ref": "#/definitions/EntityConfig"
+        },
+        "state": {
+          "$ref": "#/definitions/EntityState"
+        }
+      }
     }
   }
 }
