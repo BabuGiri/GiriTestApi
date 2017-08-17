@@ -5,6 +5,69 @@
     "description": "",
     "version": "1.0.0"
   },
+  "paths": {
+    "/Entity/config": {
+      "get": {
+        "summary": "Get Configuration of multiple instances",
+        "description": "used for reading configuration of multiple instances for Entity",
+        "parameters": [
+          {
+            "name": "dvi",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "$ref": "#/definitions/EntityConfig"
+            }
+          },
+          "204": {},
+          "401": {},
+          "500": {
+            "schema": {
+              "$ref": "#/definitions/ResponseStatus"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Modify Entity instance",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/EntityConfig"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "$ref": "#/definitions/ResponseStatus"
+            }
+          },
+          "500": {
+            "schema": {
+              "$ref": "#/definitions/ResponseStatus"
+            }
+          }
+        }
+      },
+      "delete": {},
+      "parameters": [
+        {
+          "name": "entityId",
+          "in": "query",
+          "type": "string"
+        }
+      ]
+    },
+    "/Entity/state": {},
+    "/Entity/fullEntity": {}
+  },
   "definitions": {
     "EntitiyIdentifiers": {
       "properties": {
@@ -41,6 +104,14 @@
         "state": {
           "$ref": "#/definitions/EntityState"
         }
+      }
+    },
+    "ResponseStatus": {
+      "properties": {
+        "statusString": {
+          "type": "string"
+        },
+        "statusCode": {}
       }
     }
   }
