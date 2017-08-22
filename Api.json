@@ -86,6 +86,7 @@
           "type": "string"
         },
         "description": {
+          "description": "sample description",
           "type": "string"
         }
       }
