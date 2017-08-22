@@ -122,6 +122,16 @@
         },
         "statusCode": {}
       }
+    },
+    "Relation": {
+      "properties": {
+        "entityId": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
     }
   }
 }
