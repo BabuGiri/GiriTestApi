@@ -115,20 +115,26 @@
         }
       }
     },
-    "ResponseStatus": {
-      "properties": {
-        "statusString": {
-          "type": "string"
-        },
-        "statusCode": {}
-      }
-    },
     "Relation": {
       "properties": {
         "entityId": {
           "type": "string"
         },
         "name": {
+          "type": "string"
+        }
+      }
+    },
+    "ResponseStatus": {
+      "properties": {
+        "statusString": {
+          "type": "string"
+        },
+        "statusCode": {
+          "enum": [
+            "responseOk",
+            "DeviceError"
+          ],
           "type": "string"
         }
       }
