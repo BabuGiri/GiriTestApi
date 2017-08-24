@@ -126,7 +126,7 @@
       }
     },
     "ResponseStatus": {
-      "properties": {
+      "property": {
         "statusString": {
           "type": "string"
         },
